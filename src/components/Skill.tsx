@@ -19,6 +19,14 @@ function Skill() {
         <span>NodeJS</span>
         <span>MongoDB</span>
         <span>React Native</span>
+        <span>Docker</span>
+        <span>Linux</span>
+        <span>Git/Version Control</span>
+        <span>Problem-Solving</span>
+        <span>Project Management</span>
+        <span>Adaptability</span>
+        <span>Communication</span>
+
         <span>MySQL</span>
         <span>GitHub</span>
         <span>Postman</span>

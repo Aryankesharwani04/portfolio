@@ -5,41 +5,54 @@ function Project() {
       <h1 className="text-3xl font-bold mb-4 text-[var(--primary-300)]">Projects</h1>
       <div className="">
         <div className="box">
-          <a href="https://github.com/Aryankesharwani04/Journee"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>Journee</u></h2></a>
+          <a href="#"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>Eventio</u></h2></a>
           <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
-            <li> Developed a Tours and Travels Booking Website using the MERN stack.</li>
-            <li>Designed and implemented the frontend using ReactJS.</li>
-            <li>Created models for login, registration, and tour reviews using ExpressJS and MongoDB.</li>
-            <li>Verified all routes and functionalities using Postman.</li>
-            <li>Implemented robust backend functionalities and data management to handle client requests.</li>
-            <li>Connected the frontend to the backend, enabling seamless data flow and user interaction.</li>
-            <li>Deployed the application to a production environment, ensuring accessibility and scalability.</li>
+            <li>Designed and implemented a high-performance, scalable backend utilizing microservices architecture to optimize system modularity and maintainability.</li>
+            <li>Developed a robust concurrency control mechanism for seat reservations, ensuring ACID compliance and 100% atomicity in transaction management.</li>
+            <li>Enhanced system performance by integrating Node.js Cluster and OS-level load balancing, achieving efficient resource utilization and improved response times.</li>
           </ul>
         </div>
         <div className="box">
-          <a href="https://github.com/Aryankesharwani04/javascriptBackend/tree/main/VideoStreaming"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>VideoFlix</u> <span>(In Progress)</span></h2></a>
+          <a href="#"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>BeUnique</u></h2></a>
           <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
-            <li>Currently developing a video streaming application to learn and implement backend technologies.</li>
-            <li> Using Express.js and tools like Postman, Cloudinary, MongoDB Atlas to manage backend operations and database interactions.</li>
-            <li>Enhancing back-end development skills by handling various server-side tasks and integrating APIs.</li>
+            <li>Engineered a full-stack web application for automating username availability checks across multiple platforms, improving user experience and efficiency.</li>
+            <li>Developed a React-based frontend with optimized search functionality using debouncing techniques to minimize redundant API requests and improve performance.</li>
+            <li>Designed and implemented scalable RESTful APIs to ensure high availability and seamless data retrieval.</li>
+          </ul>
+        </div>
+        <div className="box">
+          <a href="#"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>JOURNEE</u></h2></a>
+          <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
+            <li>Developed a feature-rich, full-stack travel booking platform capable of handling 100+ concurrent users with minimal latency.</li>
+            <li>Integrated Cloudinary CDN for seamless image upload and management, enhancing performance and reducing server load.</li>
+            <li>Optimized database queries and API response times, ensuring efficient data retrieval and a smooth user experience.</li>
+          </ul>
+        </div>
+
+        <div className="box">
+          <a href="https://github.com/Aryankesharwani04/javascriptBackend/tree/main/VideoStreaming"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>VideoFlix</u></h2></a>
+          <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
+            <li>Developed a backend system for a scalable video streaming application, implementing video upload, storage, and streaming functionalities.</li>
+            <li>Integrated user authentication and authorization mechanisms, ensuring secure access and role-based content control.</li>
+            <li>Implemented adaptive bitrate streaming for enhanced playback experience based on network conditions.</li>
           </ul>
         </div>
         <div className="box">
           <a href="https://github.com/Aryankesharwani04/WebScrapping/tree/main/attendanceGetter"><h1 className="text-xl font-bold text-[var(--accent-200)]"><u>Attendance Scraping</u></h1></a>
           <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
-            <li>Designed a web scraping tool using Node.js Puppeteer to automate the retrieval of attendance data from the college ERP portal.</li>
-            <li>Deployed automated login to securely handle user authentication. </li>
-            <li>Extracted and parsed HTML content to get total lecture and total absents.</li>
-            <li>Acquired skills in web scraping, automated web interactions, and data extraction using Puppeteer.</li>
+            <li>Designed and deployed a web scraping tool using Node.js and Puppeteer to automate retrieval of attendance data from the college ERP portal.</li>
+            <li>Implemented automated login functionality to securely handle user authentication and session management.</li>
+            <li>Extracted and parsed dynamic HTML content to fetch lecture attendance records, transforming raw data into structured insights.</li>
+            <li>Gained expertise in web automation, data extraction, and headless browser interactions using Puppeteer.</li>
           </ul>
         </div>
         <div className="box">
           <a href="https://github.com/Aryankesharwani04/javascriptBackend/tree/main/CHESS"><h1 className="text-xl font-bold text-[var(--accent-200)]"><u>Chess Game</u></h1></a>
           <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
-            <li>Built a live chess game using Express.js and Socket.io for real-time communication between users.</li>
-            <li>Engineered chess moves logic and managed game state using Chess.js CDN.</li>
-            <li>Utilized EJS to render content dynamically based on backend data, enhancing the user experience.</li>
-            <li>Gained experience in bidirectional communication between web clients and servers, utilizing socket.on and socket.emit for seamless updates.</li>
+            <li>Developed a real-time multiplayer chess game using Express.js and Socket.io, ensuring seamless bidirectional communication between players.</li>
+            <li>Implemented a comprehensive chess logic engine using Chess.js, handling game state management and move validation.</li>
+            <li>Designed a dynamic user interface with EJS, rendering real-time game updates and interactions based on backend computations.</li>
+            <li>Integrated WebSocket-based real-time event handling to provide a smooth and responsive gaming experience.</li>
           </ul>
         </div>
       </div>
