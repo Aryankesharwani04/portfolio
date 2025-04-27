@@ -1,5 +1,7 @@
 # portfolio
 
+https://aryankesharwani04.vercel.app
+
 ## About
 
 This is the personal portfolio website of **Aryan Kesharwani**, a passionate Full‑Stack Developer specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js). The site showcases Aryan’s skills, projects, and provides a way to get in touch.
@@ -92,7 +94,7 @@ portfolio/
 Have questions or want to work together? Reach out:
 
 - 📧 Email: work.aryankesharwani04@gmail.com
-- 🔗 LinkedIn: https://www.linkedin.com/in/aryan-kesharwani
+- 🔗 LinkedIn: https://www.linkedin.com/in/aryankesharwani04
 
 ---
 
