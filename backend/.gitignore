@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# environment
+.env
+.env.*.local
+
+# production builds
+dist/
+build/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Optional: local test coverage
+coverage/
