@@ -2,40 +2,45 @@ import React, { useState } from "react";
 import "../App.css";
 
 function Mail() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [statusMessage, setStatusMessage] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [statusMessage, setStatusMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-
-    try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, message }),
-      });
-
-      const data = await res.json();
-      if (res.ok) {
-        setStatus("success");
-        setStatusMessage("Message sent successfully!");
-        setEmail("");
-        setMessage("");
-      } else {
-        setStatus("error");
-        setStatusMessage(data.error || "Failed to send message.");
-      }
-    } catch (error) {
+    const API = import.meta.env.VITE_API_URL;
+    if (!API) {
       setStatus("error");
-      setStatusMessage("Something went wrong. Try again later.");
+      setStatusMessage("API URL is not defined.");
+      return;
+    }
+    try {
+        const res = await fetch(`${API}/api/send`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, message }),
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+            setStatus("success");
+            setStatusMessage("Message sent successfully!");
+            setEmail("");
+            setMessage("");
+        } else {
+            setStatus("error");
+            setStatusMessage(data.error || "Failed to send message.");
+        }
+    } catch (error) {
+        setStatus("error");
+        setStatusMessage("Something went wrong. Try again later.");
     }
 
     setTimeout(() => {
-      setStatus("idle");
-      setStatusMessage("");
+        setStatus("idle");
+        setStatusMessage("");
     }, 5000);
   };
 
