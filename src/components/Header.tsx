@@ -12,7 +12,7 @@ function Header() {
           </a>
         </div>
         <p className="text-md font-bold text-justify text-[var(--text-200)]">
-        Full-Stack Developer | Software Engineer | MERN | Microservices | Cloud | Docker | Jenkins | CI/CD | Linux | System Design
+        Full-Stack Developer | Software Engineer | AWS | MERN | Microservices | Cloud | Docker | Jenkins | CI/CD | Linux | System Design
         </p>
         <i className="ri-map-pin-2-line text-md flex justify-center items-end gap-1 text-[var(--accent-200)]"><h2 className="text-xl">Kanpur, India</h2></i>
         <div className="flex justify-between items-center gap-5 mt-2">

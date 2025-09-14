@@ -5,13 +5,25 @@ function Project() {
       <h1 className="text-3xl font-bold mb-4 text-[var(--primary-300)]">Projects</h1>
       <div className="">
         <div className="box">
-          <a href="#"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>Eventio</u></h2></a>
+          <a href="https://opsentra.vercel.app"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>Opsentra</u></h2></a>
           <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
-            <li>Designed and implemented a high-performance, scalable backend utilizing microservices architecture to optimize system modularity and maintainability.</li>
-            <li>Developed a robust concurrency control mechanism for seat reservations, ensuring ACID compliance and 100% atomicity in transaction management.</li>
-            <li>Enhanced system performance by integrating Node.js Cluster and OS-level load balancing, achieving efficient resource utilization and improved response times.</li>
+            <li>Aggregates logs from <strong>Docker containers, AWS services, and Linux systems</strong> into a unified centralized platform for efficient monitoring.</li>
+            <li>Built a full‑stack MERN web interface (React.js/Vite + Node/Express) enabling seamless log visualization and management.</li>
+            <li>Packaged Fluentd as a Docker image and published to Docker Hub, enabling one-step container log collection across environments.</li>
+            <li>Automated end-to-end log forwarding for Docker containers: <strong>Container logs → Fluentd → Opsentra backend</strong>, reducing log collection latency and doubling throughput.</li>
           </ul>
         </div>
+
+        <div className="box">
+          <a href="https://github.com/Aryankesharwani04/eventio"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>Eventio</u></h2></a>
+          <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
+            <li>Developed a scalable backend using microservices architecture with inter-service communication over <strong>TCP/IP protocols</strong>, isolating Auth, Booking, and Seat Management for improved maintainability.</li>
+            <li>Implemented concurrency control for seat reservations, ensuring <strong>100% atomicity</strong> in transactions.</li>
+            <li>Optimized system performance by integrating Node.js Cluster and OS-level load balancing, achieving <strong>7,500+ RPS</strong> during stress testing with consistent latency.</li>
+            <li>Streamlined request routing via a centralized API Gateway, reducing interservice latency and improving system efficiency.</li>
+          </ul>
+        </div>
+
         <div className="box">
           <a href="#"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>BeUnique</u></h2></a>
           <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
@@ -21,13 +33,15 @@ function Project() {
           </ul>
         </div>
         <div className="box">
-          <a href="#"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>JOURNEE</u></h2></a>
+          <a href="https://journee-gilt.vercel.app"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>JOURNEE</u></h2></a>
           <ul className="list-disc text-[var(--text-200)] pl-4 text-justify">
-            <li>Developed a feature-rich, full-stack travel booking platform capable of handling 100+ concurrent users with minimal latency.</li>
-            <li>Integrated Cloudinary CDN for seamless image upload and management, enhancing performance and reducing server load.</li>
-            <li>Optimized database queries and API response times, ensuring efficient data retrieval and a smooth user experience.</li>
+            <li>Designed and developed a full-stack travel booking platform using <strong>React.js</strong> for the frontend and Node/Express for the backend, ensuring end-to-end MERN stack integration.</li>
+            <li>Connected frontend and backend via RESTful APIs for seamless real-time data communication and user interactions.</li>
+            <li>Integrated <strong>Cloudinary CDN</strong> for efficient image management, reducing media load times and supporting <strong>100+ concurrent users</strong> with minimal latency.</li>
+            <li>Containerized both frontend and backend using <strong>Docker</strong> and published images to Docker Hub, enabling portable and consistent development environments.</li>
           </ul>
         </div>
+
 
         <div className="box">
           <a href="https://github.com/Aryankesharwani04/javascriptBackend/tree/main/VideoStreaming"><h2 className="text-xl font-bold text-[var(--accent-200)]"><u>VideoFlix</u></h2></a>
