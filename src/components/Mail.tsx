@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "../App.css";
+import CollapsibleSection from "./CollapsibleSection";
 
 function Mail() {
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
-    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-    const [statusMessage, setStatusMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [statusMessage, setStatusMessage] = useState("");
 
-    const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
     const API = import.meta.env.VITE_API_URL;
@@ -17,84 +19,104 @@ function Mail() {
       return;
     }
     try {
-        const res = await fetch(`${API}/api/send`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, message }),
-        });
+      const res = await fetch(`${API}/api/send`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, message }),
+      });
 
-        const data = await res.json();
-        if (res.ok) {
-            setStatus("success");
-            setStatusMessage("Message sent successfully!");
-            setEmail("");
-            setMessage("");
-        } else {
-            setStatus("error");
-            setStatusMessage(data.error || "Failed to send message.");
-        }
-    } catch (error) {
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("success");
+        setStatusMessage("Message sent successfully!");
+        setEmail("");
+        setMessage("");
+      } else {
         setStatus("error");
-        setStatusMessage("Something went wrong. Try again later.");
+        setStatusMessage(data.error || "Failed to send message.");
+      }
+    } catch {
+      setStatus("error");
+      setStatusMessage("Something went wrong. Try again later.");
     }
 
     setTimeout(() => {
-        setStatus("idle");
-        setStatusMessage("");
+      setStatus("idle");
+      setStatusMessage("");
     }, 5000);
   };
 
   return (
-    <div className="media pb-4">
-      <h1 className="text-3xl font-bold mb-4 text-[var(--primary-300)]">Contact Me</h1>
-      
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-          type="email"
-          required
-          placeholder="Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="border border-gray-300 p-2 rounded-xl text-[var(--text-200)] bg-[var(--bg-300)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-200)]"
-        />
+    <CollapsibleSection title="Contact Me">
 
-        <textarea
-          required
-          placeholder="Your Message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="border border-gray-300 p-2 rounded-xl text-[var(--text-200)] bg-[var(--bg-300)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-200)] h-40 resize-none"
-        />
-
-        <button
-          type="submit"
-          className="flex items-center justify-center gap-2 bg-[var(--primary-200)] text-[var(--accent-200)] font-bold py-2 px-4 rounded hover:bg-[var(--primary-300)] transition-colors disabled:opacity-50"
-          disabled={status === "loading"}
-        >
-          {status === "loading" ? (
-            <span className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></span>
-          ) : (
-            "Send Message"
-          )}
-        </button>
-
-        {status !== "idle" && (
-          <div className={`flex items-center gap-2 mt-2 transition-opacity duration-500 ${status === "success" ? "text-green-500" : "text-red-500"}`}>
-            {status === "success" && (
-              <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            )}
-            {status === "error" && (
-              <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            )}
-            <p className="text-sm">{statusMessage}</p>
+      <div className="box !bg-[rgba(29,46,61,0.4)] !backdrop-blur-xl">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label htmlFor="email" className="text-xs font-medium text-[var(--text-200)] opacity-60 mb-1 block">
+              Email Address
+            </label>
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="form-input"
+            />
           </div>
-        )}
-      </form>
-    </div>
+
+          <div>
+            <label htmlFor="message" className="text-xs font-medium text-[var(--text-200)] opacity-60 mb-1 block">
+              Message
+            </label>
+            <textarea
+              id="message"
+              required
+              placeholder="Tell me about your project or just say hi..."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="form-input h-36 resize-none"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="btn-submit self-start"
+            disabled={status === "loading"}
+          >
+            {status === "loading" ? (
+              <span className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-[var(--bg-100)]"></span>
+            ) : (
+              <>
+                <i className="ri-send-plane-2-line"></i>
+                Send Message
+              </>
+            )}
+          </button>
+
+          <AnimatePresence>
+            {status !== "idle" && status !== "loading" && (
+              <motion.div
+                className={`flex items-center gap-2 text-sm ${status === "success" ? "text-emerald-400" : "text-red-400"
+                  }`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                {status === "success" ? (
+                  <i className="ri-checkbox-circle-line text-lg"></i>
+                ) : (
+                  <i className="ri-error-warning-line text-lg"></i>
+                )}
+                <p>{statusMessage}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </form>
+      </div>
+    </CollapsibleSection>
   );
 }
 

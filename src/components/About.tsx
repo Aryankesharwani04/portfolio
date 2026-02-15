@@ -1,14 +1,23 @@
 import "../App.css";
+import CollapsibleSection from "./CollapsibleSection";
 
 function About() {
   return (
-    <div className="media pb-4">
-      <h1 className="text-3xl font-bold mb-4 text-[var(--primary-300)]">About Me</h1>
-      <p className="text-[var(--text-200)] text-justify">
-        Full-stack developer with hands-on experience building scalable web applications using <strong>React.js</strong> and <strong>Express.js</strong>. Proficient in <strong>Linux (Ubuntu)</strong>, <strong>Docker</strong>, and <strong>AWS (EC2, S3, IAM)</strong>, with academic and personal projects focused on designing scalable <strong>microservices</strong> and automating <strong>cloud workflows</strong>. Skilled in database optimization, API development, and problem-solving, delivering robust and efficient software solutions. Passionate about applying technical expertise to create high-performance systems and impactful innovations.
+    <CollapsibleSection title="About Me">
+      <p className="text-[var(--text-200)] text-justify leading-relaxed">
+        Aspiring Software Developer with hands-on experience in building scalable web applications using{" "}
+        <strong className="text-[var(--primary-300)] font-semibold">React.js</strong>,{" "}
+        <strong className="text-[var(--primary-300)] font-semibold">Express.js</strong>, and{" "}
+        <strong className="text-[var(--primary-300)] font-semibold">Django</strong>, along with designing{" "}
+        <strong className="text-[var(--primary-300)] font-semibold">microservices-based backend systems</strong>.
+        Experienced in containerizing applications with{" "}
+        <strong className="text-[var(--primary-300)] font-semibold">Docker</strong>, automating{" "}
+        <strong className="text-[var(--primary-300)] font-semibold">AWS workflows</strong>, and applying
+        strong problem-solving skills with solid CS fundamentals.
       </p>
-    </div>
+    </CollapsibleSection>
   );
 }
 
 export default About;
+

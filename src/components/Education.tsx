@@ -1,40 +1,74 @@
+import { motion } from "framer-motion";
 import "../App.css";
+import CollapsibleSection from "./CollapsibleSection";
+
+const educationData = [
+  {
+    institution: "Pranveer Singh Institute of Technology, Kanpur",
+    degree: "Bachelor of Technology, Computer Science Engineering",
+    date: "2022 – 2026",
+    score: "CGPA: 8.51/10 (Till 6th sem)",
+  },
+  {
+    institution: "Maharishi Patanjali Vidya Mandir",
+    degree: "Intermediate",
+    date: "April 2020 – March 2021",
+    score: "Percentage: 85",
+  },
+  {
+    institution: "JMG Sr. Secondary School",
+    degree: "High School",
+    date: "April 2018 – March 2019",
+    score: "Percentage: 92",
+  },
+];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.15 * i,
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  }),
+};
+
 function Education() {
   return (
-    <div className=" media pb-4">
-      <h1 className="text-3xl font-bold mb-4 text-[var(--primary-300)]">Education</h1>
-      <div className="box flex justify-between">
-        <div className="edu__name">
-          <h2 className="text-lg font-medium">Pranveer Singh Institute of Technology</h2>
-          <h3>Bachelor of Technology, Computer Science</h3>
-        </div>
-        <div className="edu__date">
-          <h4>Expected 2026</h4>
-          <h4>SGPA: 8.54 (5th sem)</h4>
-        </div>
+    <CollapsibleSection title="Education">
+      <div className="edu-timeline">
+        {educationData.map((edu, i) => (
+          <motion.div
+            key={i}
+            className="box flex flex-col sm:flex-row sm:justify-between gap-2"
+            custom={i}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="edu__name">
+              <h2 className="text-base font-semibold text-[var(--text-100)]">
+                {edu.institution}
+              </h2>
+              <h3 className="text-sm text-[var(--text-200)] opacity-80">
+                {edu.degree}
+              </h3>
+            </div>
+            <div className="edu__date flex flex-col items-start sm:items-end gap-1">
+              <span className="edu-badge">{edu.date}</span>
+              <span className="text-xs text-[var(--primary-300)] font-medium">
+                {edu.score}
+              </span>
+            </div>
+          </motion.div>
+        ))}
       </div>
-      <div className="box flex justify-between">
-        <div className="edu__name ">
-          <h2 className="text-lg font-medium">Maharishi Patanjali Vidya Mandir</h2>
-          <h3>Intermediate</h3>
-        </div>
-        <div className="edu__date">
-          <h4>April 2020 - March 2021</h4>
-          <h4>Percentage: 85</h4>
-        </div>
-      </div>
-      <div className="box flex justify-between">
-        <div className="edu__name">
-          <h2 className="text-lg font-medium">JMG Sr. Secondary School</h2>
-          <h3>High School</h3>
-        </div>
-        <div className="edu__date">
-          <h4>April 2018 - March 2019</h4>
-          <h4>Percentage: 92</h4>
-        </div>
-      </div>
-    </div>
-  )
+    </CollapsibleSection>
+  );
 }
 
-export default Education
+export default Education;
