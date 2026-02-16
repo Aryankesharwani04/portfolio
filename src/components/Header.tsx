@@ -1,4 +1,5 @@
 import profile from "../assets/profile-img.png";
+import resume from "../assets/AryanResume_work (3).pdf";
 import { motion } from "framer-motion";
 import "../App.css";
 
@@ -55,20 +56,30 @@ function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <a href="https://www.linkedin.com/in/aryankesharwani04/" className="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/aryankesharwani04/" className="social-icon" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
             <i className="ri-linkedin-box-fill"></i>
           </a>
-          <a href="https://github.com/aryankesharwani04" className="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/aryankesharwani04" className="social-icon" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer">
             <i className="ri-github-fill"></i>
           </a>
-          <a href="mailto:work.aryankesharwani04@gmail.com" className="social-icon" aria-label="Email">
+          <a href="mailto:work.aryankesharwani04@gmail.com" className="social-icon" aria-label="Email" title="Email">
             <i className="ri-mail-add-line"></i>
           </a>
-          <a href="tel:+917007730147" className="social-icon" aria-label="Phone">
+          <a href="tel:+917007730147" className="social-icon" aria-label="Phone" title="Phone">
             <i className="ri-phone-line"></i>
           </a>
-          <a href="https://aryankesharwani04.vercel.app" className="social-icon" aria-label="Portfolio" target="_blank" rel="noopener noreferrer">
+          <a href="https://aryankesharwani04.vercel.app" className="social-icon" aria-label="Portfolio" title="Portfolio" target="_blank" rel="noopener noreferrer">
             <i className="ri-global-line"></i>
+          </a>
+          <a
+            href={resume}
+            download="Aryan_Kesharwani_Resume.pdf"
+            className="btn-hire !py-1.5 !px-3 !text-xs"
+            aria-label="Download Resume"
+            title="Download Resume"
+          >
+            <i className="ri-download-2-line"></i>
+            Resume
           </a>
         </motion.div>
       </div>
