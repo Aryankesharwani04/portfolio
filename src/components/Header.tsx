@@ -1,5 +1,4 @@
 import profile from "../assets/profile-img.png";
-import resume from "../assets/AryanResume_work (3).pdf";
 import { motion } from "framer-motion";
 import "../App.css";
 
@@ -72,13 +71,14 @@ function Header() {
             <i className="ri-global-line"></i>
           </a>
           <a
-            href={resume}
-            download="Aryan_Kesharwani_Resume.pdf"
+            href="https://drive.google.com/file/d/1SxGPo-BXV09kAu3Xxgj_7a4IUDFWvQDB/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-hire !py-1.5 !px-3 !text-xs"
-            aria-label="Download Resume"
-            title="Download Resume"
+            aria-label="View Resume"
+            title="View Resume"
           >
-            <i className="ri-download-2-line"></i>
+            <i className="ri-eye-line"></i>
             Resume
           </a>
         </motion.div>

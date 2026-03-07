@@ -12,24 +12,25 @@ interface ProjectData {
 
 const projects: ProjectData[] = [
   {
+    name: "Eventio",
+    github: "https://github.com/Aryankesharwani04/eventio",
+    tech: "Node.js, Microservices, MongoDB, Redis, Docker",
+    bullets: [
+      <>Architected a horizontally scalable <strong>microservices backend</strong> (Auth, Booking, Seat, API Gateway) with inter-service communication over HTTP and TCP/IP protocols.</>,
+      <>Replaced optimistic locking with <strong>Redis-based distributed seat locking</strong> to prevent double booking across 12 cluster workers under high concurrency.</>,
+      <>Implemented ownership-safe atomic unlock using <strong>Redis Lua scripting</strong> to eliminate race conditions.</>,
+      <>Achieved <strong>7,500+ RPS</strong> during stress testing using Node.js Cluster and OS-level load balancing, with consistent low latency.</>,
+    ],
+  },
+  {
     name: "Opsentra",
     github: "https://github.com/Aryankesharwani04/opsentra",
     live: "https://opsentra.vercel.app",
     tech: "Docker, AWS CloudWatch, EC2, MERN Stack, Tailwind CSS",
     bullets: [
-      <>Built a centralized logging platform aggregating logs from <strong>Docker containers, AWS services, and Linux</strong> systems.</>,
-      <>Led the full-stack team in building a MERN dashboard for centralized log visualization.</>,
-      <>Implemented backend services to automatically forward <strong>system and Docker logs from EC2 instances to AWS CloudWatch</strong> and fetch logs for visualization.</>,
-    ],
-  },
-  {
-    name: "Eventio",
-    github: "https://github.com/Aryankesharwani04/eventio",
-    tech: "Node.js, Microservices, MongoDB",
-    bullets: [
-      <>Developed a scalable backend using microservices architecture with inter-service communication over <strong>TCP/IP protocols</strong>, isolating Auth, Booking, and Seat Management for improved maintainability.</>,
-      <>Implemented concurrency control for seat reservations, ensuring <strong>100% atomicity</strong> in transactions.</>,
-      <>Optimized system performance by integrating Node.js Cluster and OS-level load balancing, achieving <strong>7,500+ RPS</strong> during stress testing with consistent latency.</>,
+      <>Built a centralized logging platform aggregating logs from <strong>Docker containers, AWS services, and Linux systems</strong>.</>,
+      <>Led the full-stack team in building a <strong>MERN dashboard</strong> for centralized log visualization.</>,
+      <>Implemented backend services to automatically forward system and Docker logs from <strong>EC2 instances to AWS CloudWatch</strong> and fetch logs for visualization.</>,
     ],
   },
   {
