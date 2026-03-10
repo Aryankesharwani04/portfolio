@@ -25,12 +25,17 @@ const projects: ProjectData[] = [
   {
     name: "Opsentra",
     github: "https://github.com/Aryankesharwani04/opsentra",
-    live: "https://opsentra.vercel.app",
-    tech: "Docker, AWS CloudWatch, EC2, MERN Stack, Tailwind CSS",
+    tech: "Node.js, Express, MongoDB, Redis, AWS CloudWatch, React",
     bullets: [
-      <>Built a centralized logging platform aggregating logs from <strong>Docker containers, AWS services, and Linux systems</strong>.</>,
-      <>Led the full-stack team in building a <strong>MERN dashboard</strong> for centralized log visualization.</>,
-      <>Implemented backend services to automatically forward system and Docker logs from <strong>EC2 instances to AWS CloudWatch</strong> and fetch logs for visualization.</>,
+      <>Built a centralized log monitoring platform that aggregates EC2 system logs, Docker container logs, and application logs from AWS CloudWatch and streams them to a real-time observability dashboard.</>,
+      <>Designed a scalable log ingestion pipeline using <strong>CloudWatch → background workers → Redis queue → MongoDB</strong> to process and store logs efficiently.</>,
+      <>Developed backend services using <strong>Node.js and Express</strong>, implementing APIs for authentication, AWS account integration, server registration, and log querying.</>,
+      <>Implemented background workers that poll CloudWatch via <strong>AWS STS AssumeRole</strong>, ensuring secure cross-account log access without storing AWS credentials.</>,
+      <>Built an automated agent installer that configures the CloudWatch agent on <strong>EC2 instances</strong> and forwards logs from system services, Nginx servers, and Docker containers.</>,
+      <>Developed a <strong>React-based observability dashboard</strong> with live log streaming, server filtering, and log-level categorization (INFO, WARN, ERROR, DEBUG).</>,
+      <>Integrated <strong>Redis-based queuing and caching</strong> to decouple ingestion from storage and support high-throughput log processing.</>,
+      <>Designed a <strong>multi-tenant workspace architecture</strong> to isolate logs across users and infrastructure environments.</>,
+      <><strong>Future Scope:</strong> Planning integration of an AI-powered log analysis agent that detects infrastructure errors and suggests remediation commands automatically.</>,
     ],
   },
   {
