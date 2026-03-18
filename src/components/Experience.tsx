@@ -8,8 +8,7 @@ const experiences = [
         role: "Python Developer Intern",
         period: "Nov 2025 – Jan 2026",
         links: [
-            { label: "Github", url: "https://github.com/Aryankesharwani04/QuizGen" },
-            { label: "Live", url: "https://quizgen-test.vercel.app/" },
+            { label: "Certificate", url: "https://drive.google.com/file/d/1XEohO_kfhmBvFKAxmk41sXZoQaUVYQil/view" },
         ],
         bullets: [
             <>Led end-to-end development of <strong>QuizGen</strong>, designing system architecture and coordinating task distribution as team lead.</>,
