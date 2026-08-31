@@ -30,13 +30,13 @@ function Header() {
           </motion.a>
         </div>
 
-        <motion.p
+                <motion.p
           className="text-sm font-medium text-[var(--text-200)] leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Full-Stack Developer | Software Engineer | AWS | MERN | Microservices | Cloud | Docker | Jenkins | CI/CD | Linux | System Design
+          Software Engineer | .NET Core | MERN Stack | Distributed Systems | REST APIs | AWS | Docker | System Design
         </motion.p>
 
         <motion.div
@@ -46,7 +46,7 @@ function Header() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <i className="ri-map-pin-2-line text-lg"></i>
-          <span className="text-sm font-medium">Kanpur, India</span>
+          <span className="text-sm font-medium">Bengaluru, India</span>
         </motion.div>
 
         <motion.div

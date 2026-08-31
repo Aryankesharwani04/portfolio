@@ -5,23 +5,23 @@ import CollapsibleSection from "./CollapsibleSection";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["C#", "C++", "JavaScript", "Python", "Java (Basics)", "SQL"],
+    skills: ["C#", "C++", "JavaScript", "Python", "SQL"],
   },
   {
-    title: "Web Technologies",
-    skills: ["HTML5", "CSS3", "React.js", "Node.js", "Express.js", "REST APIs", "Tailwind CSS", "Puppeteer"],
-  },
-  {
-    title: "DevOps & Cloud",
-    skills: ["AWS", "Linux (Ubuntu)", "Docker", "Git", "GitHub", "Bitbucket", "Jenkins"],
+    title: "Backend & Frameworks",
+    skills: [".NET Core", "ASP.NET", "Vue.js", "React.js", "Node.js", "Express.js", "Django", "REST APIs"],
   },
   {
     title: "Databases",
-    skills: ["MySQL", "MongoDB", "PostgreSQL"],
+    skills: ["MSSQL", "MongoDB", "PostgreSQL", "MySQL", "Redis"],
+  },
+  {
+    title: "DevOps & Cloud",
+    skills: ["AWS", "Docker", "Linux (Ubuntu)", "Git", "GitHub", "Bitbucket"],
   },
   {
     title: "CS Fundamentals",
-    skills: ["Data Structures & Algorithms", "Operating Systems", "DBMS", "Object-Oriented Design"],
+    skills: ["Data Structures & Algorithms", "System Design", "Operating Systems", "DBMS", "Microservices"],
   },
 ];
 

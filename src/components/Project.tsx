@@ -16,21 +16,19 @@ const projects: ProjectData[] = [
     github: "https://github.com/Aryankesharwani04/eventio",
     tech: "Node.js, Microservices, MongoDB, Redis, Docker",
     bullets: [
-      <>Architected a horizontally scalable <strong>microservices backend</strong> (Auth, Booking, Seat, API Gateway) with inter-service communication over HTTP and TCP/IP protocols.</>,
-      <>Replaced optimistic locking with <strong>Redis-based distributed seat locking</strong> to prevent double booking across 12 cluster workers under high concurrency.</>,
-      <>Implemented ownership-safe atomic unlock using <strong>Redis Lua scripting</strong> to eliminate race conditions.</>,
-      <>Achieved <strong>7,500+ RPS</strong> during stress testing using Node.js Cluster and OS-level load balancing, with consistent low latency.</>,
+      <>Architected a horizontally scalable <strong>microservices backend</strong> (Auth, Booking, Seat, API Gateway) with inter-service communication over HTTP and TCP/IP, cutting latency by <strong>30%</strong>.</>,
+      <>Replaced optimistic locking with <strong>Redis-based distributed seat locking + Lua scripting</strong> for atomic, race-condition-free reservations.</>,
+      <>Achieved <strong>7,500+ RPS</strong> at <strong>15–20ms latency</strong> under Autocannon stress testing using Node.js Cluster and OS-level load balancing.</>,
     ],
   },
   {
     name: "Opsentra",
     github: "https://github.com/Aryankesharwani04/opsentra",
-    tech: "Node.js, Express, MongoDB, Redis, AWS CloudWatch, React",
+    tech: "Node.js, Express.js, React.js, MongoDB, Redis, Docker, AWS CloudWatch, EC2",
     bullets: [
-      <>Engineered Opsentra, a centralized observability platform that collects logs from <strong>EC2 instances, Docker containers, and Linux services</strong>.</>,
-      <>Designed an automated log collection workflow: <strong>Opsentra Agent → AWS CloudWatch → Opsentra Backend → Dashboard</strong> enabling centralized log monitoring.</>,
-      <>Implemented backend workers using <strong>Node.js, Redis queues, and MongoDB</strong> to fetch, process, and store CloudWatch logs from distributed infrastructure.</>,
-      <>Built a <strong>React dashboard</strong> to visualize logs in real time with search, filtering by server, and log-level categorization (INFO/WARN/ERROR) for easier monitoring across thousands of log entries.</>,
+      <>Engineered Opsentra, a centralized observability platform aggregating logs from <strong>EC2 instances, Docker containers, and Linux services</strong>.</>,
+      <>Designed a log ingestion pipeline: <strong>Agent → CloudWatch → Backend → Dashboard</strong> for real-time centralized monitoring.</>,
+      <>Implemented backend workers with <strong>Node.js, Redis queues, and MongoDB</strong> to fetch, process, and store CloudWatch logs; built a <strong>React dashboard</strong> for real-time visualization with search, server filtering, and INFO/WARN/ERROR categorization.</>,
     ],
   },
   {

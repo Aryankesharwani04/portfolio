@@ -7,7 +7,7 @@ const educationData = [
     institution: "Pranveer Singh Institute of Technology, Kanpur",
     degree: "Bachelor of Technology, Computer Science Engineering",
     date: "2022 – 2026",
-    score: "CGPA: 8.51/10 (Till 6th sem)",
+    score: "CGPA: 8.6/10",
   },
   {
     institution: "Maharishi Patanjali Vidya Mandir",
